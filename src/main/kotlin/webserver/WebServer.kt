@@ -47,14 +47,11 @@ fun route(req: Request): Response {
   val hello = route.substringBefore('?')
   if (home_checker.equals("")) {
     return homePageHandler(req)
-  }
-  else if (home_checker.equals("computing")){
+  } else if (home_checker.equals("computing")) {
     return computingHandler(req)
-  }
-  else if (hello.equals("/say-hello")) {
+  } else if (hello.equals("/say-hello")) {
     return helloHandler(req)
-  }
-  else {
+  } else {
     return otherHandler(req)
   }
 }
